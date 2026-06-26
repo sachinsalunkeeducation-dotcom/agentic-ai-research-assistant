@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI System</title>
+    
+    <style>
+        /* CSS Variables for easy color management */
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #0f172a;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            background-color: var(--surface);
+            width: 100%;
+            max-width: 750px;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.75rem;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            resize: vertical;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            width: 100%; /* Makes the button span the full width */
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .output-section {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        #status {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            background: #f1f5f9;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+        }
+
+        #report {
+            background-color: #0f172a; /* Dark background for code/reports looks very "AI" */
+            color: #f8fafc;
+            border-radius: 8px;
+            padding: 1.25rem;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap; /* Ensures long lines of text wrap nicely */
+            overflow-x: auto;
+            min-height: 100px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🤖 Agentic AI Research Assistant</h1>
+
+    <textarea 
+        id="query" 
+        placeholder="Enter your research topic, constraints, and specific questions..."
+    ></textarea>
+
+    <button onclick="generateReport()">Generate Report</button>
+
+    <div class="output-section">
+        <h3>Status</h3>
+        <p id="status">Waiting for input...</p>
+
+        <h3>Report</h3>
+        <pre id="report">// Your generated research report will appear here...</pre>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
