@@ -364,7 +364,7 @@ Diploma in Artificial Intelligence & Machine Learning
 
 GitHub: https://github.com/sachinsalunkeeducation-dotcom
 
-LinkedIn: *(Add your LinkedIn profile here)*
+LinkedIn: (https://www.linkedin.com/in/sachin-salunke-617429326)
 
 ---
 
